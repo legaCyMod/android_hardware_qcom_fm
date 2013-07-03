@@ -1,4 +1,4 @@
-ifeq ($(call is-vendor-board-platform,QCOM),true)
+ifeq ($(BOARD_HAVE_QCOM_FM),true)
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -12,4 +12,4 @@ LOCAL_MODULE:= qcom.fmradio
 include $(BUILD_JAVA_LIBRARY)
 
 include $(LOCAL_PATH)/jni/Android.mk
-endif # is-vendor-board-platform
+endif
