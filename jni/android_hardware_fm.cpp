@@ -415,7 +415,7 @@ static jint android_hardware_fmradio_FmReceiverJNI_setNotchFilterNative(JNIEnv *
 {
     char value[PROPERTY_VALUE_MAX] = {'\0'};
     int init_success = 0,i;
-    char notch[20] = {0x00};
+    char notch[PROPERTY_VALUE_MAX] = {0x00};
     struct v4l2_control control;
     int err;
     /*Enable/Disable the WAN avoidance*/
